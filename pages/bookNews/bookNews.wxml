@@ -1,0 +1,15 @@
+<view class='bn-container'> 
+  <view class='bn-list' bindtap='toBorrowBookDetail' wx:for="{{bookNewsList}}" wx:for-item="bn" data-ownerid="{{bn.owner.id}}" data-bookstoreid='{{bn.id}}'>
+    <view class='bn-list-image'>
+      <!-- <image src='../../images/bn-user-01.jpg'></image> -->
+    </view>
+    <view class='bn-list-main'>
+      <view class='bn-list-main-name'></view>
+      <view class='bn-list-mian-text'>
+        <text>想借阅</text>
+        <text class='bn-list-mian-title'>{{bn.book.title}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='bn-list'></view>
+</view>

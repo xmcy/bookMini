@@ -1,0 +1,76 @@
+<view class='main-container'>
+  <!-- 搜索框 -->
+  <view class='main-search'>
+    <view class='main-search-icon'>
+      <image src='../../images/search-icon-01.png'></image>
+    </view>
+    <view class='main-search-input'>
+      <input placeholder='输入您要找的书名/作者/关键字' placeholder-class='main-input-placeholder'></input>
+    </view>
+  </view>
+  <!-- 推荐 -->
+  <view class='main-header'>
+    <view class='main-header-title'>好书推荐</view>
+    <view class='main-header-section'>
+      <view class='main-header-section-list'>
+        <view class='main-header-section-list-image'>
+          <image src='../../images/main-head-01.jpg'></image>
+        </view>
+        <view class='main-header-section-list-text'>欲说</view>
+      </view>
+      <view class='main-header-section-list'>
+        <view class='main-header-section-list-image'>
+          <image src='../../images/main-head-02.jpg'></image>
+        </view>
+        <view class='main-header-section-list-text'>原罪</view>
+      </view>
+      <view class='main-header-section-list'>
+        <view class='main-header-section-list-image'>
+          <image src='../../images/main-head-03.jpg'></image>
+        </view>
+        <view class='main-header-section-list-text'>月亮忘记了</view>
+      </view>
+    </view>
+    <view class='main-header-footer'>
+      <view class='main-header-button'>换一批</view>
+    </view>
+  </view>
+  <!-- 动态 -->
+  <view class='main-section'>
+    <view class='main-sec-title'>最新动态</view>
+    <view class='main-sec-con'>
+      <view class='main-sec-con-list' bindtap='toBookDetails' wx:for="{{uploadList}}" wx:for-item="upload" data-bookownerId="{{upload.ownerid}}" data-bookId='{{upload.id}}'>
+        <view class='main-sec-con-list-view'>
+          <view class='main-sec-con-list-image'>
+            <image src='{{upload.image}}'></image>
+          </view>
+          <view class='main-sec-con-list-text'>{{upload.title}}</view>
+        </view>
+        <view class='main-sec-con-list-two'>
+          <view class='main-sec-con-list-user'>
+            <view class='main-sec-con-list-user-image'>
+              <image src='{{upload.userImage}}'></image>
+            </view>
+            <view class='main-sec-con-list-user-text'>{{upload.userName}}</view>
+          </view>
+          <view class='main-sec-con-list-add'>
+            <view class='main-sec-con-list-add-image'>
+              <image src='{{upload.userMap}}'></image>
+            </view>
+            <view class='main-sec-con-list-add-text'>{{upload.userDistance}}</view>
+          </view>
+        </view>     
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='getUserInfoView' hidden='true'>
+  <view class='getUserInfoView-main'>
+    <view class='getUserInfoView-main-title'>登录授权</view>
+    <view class='getUserInfoView-main-text'>小程序登录需要获得您的同意，请您点击同意授权！</view>
+    <view class='getUserInfoView-main-buttom'>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap='isClick'>同意 </button>
+    </view>
+  </view>
+</view>

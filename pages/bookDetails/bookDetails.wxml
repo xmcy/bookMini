@@ -1,0 +1,32 @@
+<view class='bd-container'>
+  <view class='bd-header'>
+    <view class='bd-header-list'>
+      <view class='main-sec-con-list-user'>
+        <view class='main-sec-con-list-user-image'></view>
+        <view class='main-sec-con-list-user-text'>{{borrowBookList.username}}</view>
+      </view>
+      <view class='bd-header-list-button'>关注</view>
+    </view>
+    <view class='bd-header-list'>
+      <view class='bd-header-list-book-img'>
+        <image src='{{borrowBookList.image}}'></image>
+      </view>
+      <view class='bd-header-list-book-text'>
+        <view class='bd-header-list-book-text-title'>{{borrowBookList.title}}</view>
+        <view class='bd-header-list-book-text-author'>{{borrowBookList.author}}</view>
+        <view class='bd-header-list-book-text-main'>
+          <view>{{borrowBookList.summary}}</view>
+          <view class='bd-header-list-book-text-main-more'>更多</view>
+        </view>
+      </view>
+    </view>
+    <view class='bd-header-list'>
+      <view class='bd-header-list-button bd-header-list-button-normal' bindtap='toBorrowBookDetail'>借书</view>
+      <view class='bd-header-list-button bd-header-list-button-normal'>收藏</view>
+      <view class='bd-header-list-price'>
+        <view class='bd-header-list-price-icon'><image src='../../images/bd-price.png'></image></view>
+        <view class='bd-header-list-price-text'>26.00</view>
+      </view>
+    </view>
+  </view>
+</view>

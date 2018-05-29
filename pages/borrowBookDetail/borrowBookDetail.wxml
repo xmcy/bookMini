@@ -1,0 +1,49 @@
+<view class='bb-container'>
+  <view class='bb-main'>
+    <view class='bb-header'>
+      <view class='bn-list-image'>
+        <!-- <image src='../../images/bn-user-01.jpg'></image> -->
+      </view>
+      <view class='bn-list-main'>
+        <view class='bn-list-main-name'></view>
+        <view class='bn-list-mian-text'>想借</view>
+      </view>
+    </view>
+
+    <view class='bd-header-list'>
+      <view class='bd-header-list-book-img'>
+        <image src='{{borrowBookList.book.image}}'></image>
+      </view>
+      <view class='bd-header-list-book-text'>
+        <view class='bd-header-list-book-text-title'>{{borrowBookList.book.title}}</view>
+        <view class='bd-header-list-book-text-author'>{{borrowBookList.book.author}}</view>
+        <view class='bd-header-list-book-text-main'>
+          <view>{{borrowBookList.book.summary}}</view>
+          <view class='bd-header-list-book-text-main-more'>更多</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='bb-section'>
+      <view class='bb-section-succ' bindtap='agreeApply'>同意</view>
+      <view class='bb-section-fail' bindtap='disagreeApply'>拒绝</view>
+    </view>
+
+    <view class='bb-footer'>
+      <view class='bb-footer-left'>
+        <view class='bb-footer-left-image'>
+          <image src='../../images/bn-user-01.jpg'></image>
+        </view>
+        <view class='bb-footer-left-image'>
+          <image src='../../images/bn-user-01.jpg'></image>
+        </view>
+        <view>也想借这本书</view>
+      </view>
+      <view class='bb-footer-right'>
+        <image src='../../images/book-right.png'></image>
+      </view>
+    </view>
+
+  </view>
+</view>
+
